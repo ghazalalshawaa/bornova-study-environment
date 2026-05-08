@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bornova Koshu • Student Life at Yaşar</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#d2c4b2",
+                    "primary": "#7d525f",
+                    "tertiary-fixed": "#f4ded5",
+                    "secondary-fixed": "#efe0cd",
+                    "on-surface-variant": "#504446",
+                    "on-tertiary": "#ffffff",
+                    "inverse-primary": "#eeb8c7",
+                    "surface-container": "#f1ede7",
+                    "on-secondary-container": "#6d6354",
+                    "primary-fixed-dim": "#eeb8c7",
+                    "on-background": "#1c1c18",
+                    "inverse-surface": "#31302d",
+                    "tertiary": "#6b5b54",
+                    "on-primary-fixed": "#30111c",
+                    "surface-bright": "#fdf9f3",
+                    "surface-tint": "#7d525f",
+                    "surface": "#fdf9f3",
+                    "on-secondary-fixed": "#221a0f",
+                    "on-tertiary-fixed": "#251914",
+                    "on-secondary-fixed-variant": "#4f4538",
+                    "error": "#ba1a1a",
+                    "error-container": "#ffdad6",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "on-surface": "#1c1c18",
+                    "primary-container": "#d9a5b3",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#51423c",
+                    "on-error-container": "#93000a",
+                    "background": "#fdf9f3",
+                    "on-tertiary-fixed-variant": "#52443e",
+                    "surface-container-high": "#ebe8e2",
+                    "on-primary-fixed-variant": "#623b47",
+                    "outline-variant": "#d4c2c5",
+                    "primary-fixed": "#ffd9e2",
+                    "on-secondary": "#ffffff",
+                    "surface-variant": "#e6e2dc",
+                    "outline": "#827376",
+                    "inverse-on-surface": "#f4f0ea",
+                    "secondary-container": "#efe0cd",
+                    "surface-container-low": "#f7f3ed",
+                    "tertiary-container": "#c3afa7",
+                    "surface-dim": "#dddad4",
+                    "secondary": "#675d4e",
+                    "surface-container-highest": "#e6e2dc",
+                    "on-primary-container": "#603a46",
+                    "tertiary-fixed-dim": "#d7c2ba"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "16px",
+                    "sm": "8px",
+                    "margin": "32px",
+                    "xl": "40px",
+                    "unit": "4px",
+                    "lg": "24px",
+                    "xs": "4px",
+                    "gutter": "20px"
+            },
+            "fontFamily": {
+                    "h3": ["EB Garamond"],
+                    "label-md": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "h1": ["EB Garamond"],
+                    "display": ["EB Garamond"],
+                    "label-sm": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "h2": ["EB Garamond"]
+            },
+            "fontSize": {
+                    "h3": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h1": ["32px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h2": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #fdf9f3;
+            background-image: radial-gradient(#d9a5b3 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            color: #1c1c18;
+        }
+        .polaroid {
+            background: white;
+            padding: 1rem 1rem 3rem 1rem;
+            box-shadow: 0 4px 15px rgba(125, 82, 95, 0.1);
+            transform: rotate(-2deg);
+            transition: transform 0.3s ease;
+        }
+        .polaroid:hover {
+            transform: rotate(0deg) translateY(-5px);
+        }
+        .sticker-float {
+            filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.1));
+        }
+        .masonry-card {
+            break-inside: avoid;
+            margin-bottom: 2rem;
+        }
+        .washi-tape {
+            background: rgba(217, 165, 179, 0.4);
+            height: 24px;
+            width: 80px;
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-1deg);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md shadow-sm sticky top-0 z-50 flex justify-between items-center px-margin py-md w-full max-w-full">
+<div class="font-display text-h2 text-primary tracking-tight">Bornova Koshu</div>
+<nav class="hidden md:flex items-center gap-lg">
+<a class="text-primary font-bold border-b-2 border-primary-container pb-1 font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#">Discover</a>
+<a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#">Culture</a>
+<a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#">Study Quiz</a>
+<a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors duration-300" href="#">Community</a>
+</nav>
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform" data-icon="favorite">favorite</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform" data-icon="account_circle">account_circle</span>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-margin pt-xl">
+<!-- Hero Section -->
+<section class="relative mb-xl lg:mb-32">
+<div class="grid lg:grid-cols-12 gap-lg items-center">
+<div class="lg:col-span-6 z-10">
+<span class="inline-block bg-primary-container text-on-primary-container px-md py-1 rounded-full text-label-sm font-label-sm mb-md shadow-sm">Yaşar University Student Guide</span>
+<h1 class="font-display text-display text-primary leading-tight mb-md">
+                        What Study Environment <br/>Should You Choose in Bornova?
+                    </h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-md mb-lg">
+                        Finding the perfect "third place" for your exchange semester. Whether you need deep focus or a social language exchange, we've pinned the best spots for you.
+                    </p>
+<button class="bg-primary text-on-primary px-xl py-md rounded-full font-label-md text-label-md shadow-md hover:translate-y-[-2px] transition-all flex items-center gap-sm group" onclick="document.getElementById('quiz-section').scrollIntoView({behavior: 'smooth'})">
+                        Start Finding Your Spot
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="lg:col-span-6 relative">
+<!-- Main Hero Image -->
+<div class="relative rounded-xl overflow-hidden shadow-xl transform rotate-1 border-[12px] border-white">
+<img alt="Cozy student study environment" class="w-full h-[500px] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUUbvo5QNjak4YWaZ6nvMvBEyMY49D0RMPHcuArFkzqJ-LZCCm751B_iW09YZXmN5bRIy_zdPpG2ciTnfPqtiu-73X_OjI4lkiFNfxMHRjbHl9a9x_wfD9W8tz54_HJ6Qh5Ig47Ewvj7W-npdQwFx4_pBRl7hsQMLsTPGW6kCJ61TWfJuJ2eirvRq7E-_fre65nRW2ALf8lk9-qPtRkqxWK_rtw-z4MbRBA1Mr8IKQvxoSwiR6-N6_Og_7HbYYzdKqGQrCIF6mCfnD"/>
+</div>
+<!-- Floating Sticker Assets -->
+<div class="absolute -top-10 -right-10 w-48 h-48 sticker-float z-20 animate-bounce" style="animation-duration: 3s;">
+<img alt="Cute study stickers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9utbZ2SOGEYi7uD9VGzBalaAg3Pk5G48ZmITz47QReRLMbLvhF3girBix_HxDX0zA5OhS-SUPBEmKGAoTAa6zOhXTMWnvyATRdE9oY3pxfjiR5ucHiW_xgm5UlIuseeyP3aSdJF2gAnJKd_QWosG0uCBZHweSxrsYHaEk6QcQKJrQwiYA-3-XI9k-lsx9vAQVzXT8J9otjoHTLdh22MTbe6etQTTvehZb7pU3mSbW6CVGhj20bg-0DlyprV4yovh-PV45mHvwQWaT"/>
+</div>
+<div class="absolute -bottom-8 -left-8 bg-surface-container-highest p-md rounded-xl shadow-lg border-2 border-primary-container/20 max-w-[200px] transform -rotate-3">
+<p class="font-h3 text-h3 text-primary italic">"The perfect corner for a latte and linear algebra."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section: Editorial Polaroid Layout -->
+<section class="py-xl mb-xl">
+<div class="text-center mb-20">
+<h2 class="font-display text-h1 text-primary mb-sm">Bornova Study Culture</h2>
+<div class="w-24 h-1 bg-primary-container mx-auto rounded-full"></div>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-xl items-start">
+<!-- Text Content -->
+<div class="lg:col-span-1 space-y-md">
+<p class="font-body-lg text-on-surface-variant leading-relaxed">
+                        In Bornova, the academic heart of Izmir, the "Study Cafe" is more than just a place with Wi-Fi. It's a sanctuary for the international community.
+                    </p>
+<div class="p-lg bg-secondary-container/30 rounded-xl border border-secondary-fixed-dim">
+<h4 class="font-h3 text-h3 text-primary mb-xs">Local Tip: "Çay &amp; Kahkaha"</h4>
+<p class="text-body-md italic text-on-secondary-fixed-variant">
+                            Turkish students value social connection during breaks. Don't be surprised to find groups playing backgammon (Tavla) between study sessions.
+                        </p>
+</div>
+</div>
+<!-- Polaroid 1 -->
+<div class="relative">
+<div class="washi-tape"></div>
+<div class="polaroid mx-auto max-w-[300px]">
+<img alt="Vintage Izmir street life" class="w-full grayscale-[0.2] sepia-[0.2]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuLMZR2Z68Bls1EoEaGvpzG2d_u6FRwKZzJQiEb-My96-XHdGhF5lOudDYTqu6-VN-QvhW7DodmfG8zNqUvRHlnH69FaGPfCVz1NW4Eyg8if--SRm6NUhUEZS73ooTLuZoRnVB3bbaJsI_sZqGyTi_RRvQYTCTECbQJWdXPMpGVlvPpiuFLKHC48gtT4-Jeybm3eMkOgsjHjX-lr8pv9Tz0_PQdX_MpU_Kclr3ZRd3yX5LVNZoutmHveEMRu74p8ePBioNlAaEQMZ9"/>
+<p class="font-display text-h3 text-center mt-4 text-on-surface-variant">İzmir '98 - Classic Vibes</p>
+</div>
+</div>
+<!-- Polaroid 2 -->
+<div class="relative">
+<div class="washi-tape" style="transform: translateX(-50%) rotate(2deg); background: rgba(125, 82, 95, 0.3);"></div>
+<div class="polaroid mx-auto max-w-[300px] rotate-[3deg]">
+<img alt="Cozy library reading nook" class="w-full grayscale-[0.1]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkqX7KpkdOMoF4-naKTfOKueC_W5ikrEmq2WECI6HjPhmY7_oRhp3I2nQSv4-crzIkG8HLqQg35zKfQgdc1JM2JFBTr-_VKNazzQKhFpLwFVjtcsUTtLgohtHaacmTFZmGnxc-22oqMmvtd_DZ-JGfrfXpHESmU8jcpaFTL7HBhWpMIjgbsllmUh73y1eyMhEWp5zSSKb0XgwCG6v0m_kKSAL_cO3hT0IepqnWufuGEnoEH08vQmOj_i_iv8clcb1yOX9RNuIy1hpj"/>
+<p class="font-display text-h3 text-center mt-4 text-on-surface-variant">Quiet Corners, 1983</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Recommendation Quiz Section -->
+<section class="py-xl bg-surface-container-low rounded-[2rem] px-lg md:px-xl mb-xl border border-outline-variant/30" id="quiz-section">
+<div class="max-w-3xl mx-auto">
+<div class="text-center mb-lg">
+<span class="material-symbols-outlined text-primary text-[48px]" data-icon="psychology">psychology</span>
+<h2 class="font-display text-h1 text-primary">Find Your Spot</h2>
+<p class="text-on-surface-variant">Answer 5 quick questions to discover your Bornova soulmate cafe.</p>
+</div>
+<div class="space-y-lg" id="quiz-container">
+<!-- Question 1 -->
+<div class="quiz-card p-lg bg-white rounded-xl shadow-sm border border-primary-container/20">
+<h3 class="font-h2 text-h2 text-primary mb-md">1. What's your focus level today?</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<label class="relative flex items-center gap-md p-md border-2 border-surface-variant rounded-xl cursor-pointer hover:border-primary-container transition-colors has-[:checked]:bg-primary-container/10 has-[:checked]:border-primary">
+<input class="hidden" name="focus" type="radio" value="F1"/>
+<span class="material-symbols-outlined text-primary" data-icon="self_improvement">self_improvement</span>
+<div class="text-label-md font-label-md">Zen Mode (Deep Focus)</div>
+</label>
+<label class="relative flex items-center gap-md p-md border-2 border-surface-variant rounded-xl cursor-pointer hover:border-primary-container transition-colors has-[:checked]:bg-primary-container/10 has-[:checked]:border-primary">
+<input class="hidden" name="focus" type="radio" value="F2"/>
+<span class="material-symbols-outlined text-primary" data-icon="groups">groups</span>
+<div class="text-label-md font-label-md">Collaborative Buzz</div>
+</label>
+</div>
+</div>
+<!-- Question 2 -->
+<div class="quiz-card p-lg bg-white rounded-xl shadow-sm border border-primary-container/20">
+<h3 class="font-h2 text-h2 text-primary mb-md">2. Preferred Noise Level?</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<label class="relative flex items-center gap-md p-md border-2 border-surface-variant rounded-xl cursor-pointer hover:border-primary-container transition-colors has-[:checked]:bg-primary-container/10 has-[:checked]:border-primary">
+<input class="hidden" name="noise" type="radio" value="N1"/>
+<span class="material-symbols-outlined text-primary" data-icon="volume_off">volume_off</span>
+<div class="text-label-md font-label-md">Library Silence</div>
+</label>
+<label class="relative flex items-center gap-md p-md border-2 border-surface-variant rounded-xl cursor-pointer hover:border-primary-container transition-colors has-[:checked]:bg-primary-container/10 has-[:checked]:border-primary">
+<input class="hidden" name="noise" type="radio" value="N2"/>
+<span class="material-symbols-outlined text-primary" data-icon="music_note">music_note</span>
+<div class="text-label-md font-label-md">Indie Playlist &amp; Chatter</div>
+</label>
+</div>
+</div>
+<!-- Question 3 -->
+<div class="quiz-card p-lg bg-white rounded-xl shadow-sm border border-primary-container/20">
+<h3 class="font-h2 text-h2 text-primary mb-md">3. Language Environment?</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<label class="relative flex items-center gap-md p-md border-2 border-surface-variant rounded-xl cursor-pointer hover:border-primary-container transition-colors has-[:checked]:bg-primary-container/10 has-[:checked]:border-primary">
+<input class="hidden" name="language" type="radio" value="L1"/>
+<span class="material-symbols-outlined text-primary" data-icon="translate">translate</span>
+<div class="text-label-md font-label-md">Language Exchange Friendly</div>
+</label>
+<label class="relative flex items-center gap-md p-md border-2 border-surface-variant rounded-xl cursor-pointer hover:border-primary-container transition-colors has-[:checked]:bg-primary-container/10 has-[:checked]:border-primary">
+<input class="hidden" name="language" type="radio" value="L2"/>
+<span class="material-symbols-outlined text-primary" data-icon="public">public</span>
+<div class="text-label-md font-label-md">International/English Focus</div>
+</label>
+</div>
+</div>
+<!-- Question 4 -->
+<div class="quiz-card p-lg bg-white rounded-xl shadow-sm border border-primary-container/20">
+<h3 class="font-h2 text-h2 text-primary mb-md">4. Social Vibe?</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<label class="relative flex items-center gap-md p-md border-2 border-surface-variant rounded-xl cursor-pointer hover:border-primary-container transition-colors has-[:checked]:bg-primary-container/10 has-[:checked]:border-primary">
+<input class="hidden" name="social" type="radio" value="S1"/>
+<span class="material-symbols-outlined text-primary" data-icon="person">person</span>
+<div class="text-label-md font-label-md">Anonymous Introvert</div>
+</label>
+<label class="relative flex items-center gap-md p-md border-2 border-surface-variant rounded-xl cursor-pointer hover:border-primary-container transition-colors has-[:checked]:bg-primary-container/10 has-[:checked]:border-primary">
+<input class="hidden" name="social" type="radio" value="S2"/>
+<span class="material-symbols-outlined text-primary" data-icon="forum">forum</span>
+<div class="text-label-md font-label-md">Networking Outpost</div>
+</label>
+</div>
+</div>
+<!-- Question 5 -->
+<div class="quiz-card p-lg bg-white rounded-xl shadow-sm border border-primary-container/20">
+<h3 class="font-h2 text-h2 text-primary mb-md">5. Your Budget?</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<label class="relative flex items-center gap-md p-md border-2 border-surface-variant rounded-xl cursor-pointer hover:border-primary-container transition-colors has-[:checked]:bg-primary-container/10 has-[:checked]:border-primary">
+<input class="hidden" name="budget" type="radio" value="B1"/>
+<span class="material-symbols-outlined text-primary" data-icon="savings">savings</span>
+<div class="text-label-md font-label-md">Student Friendly ($)</div>
+</label>
+<label class="relative flex items-center gap-md p-md border-2 border-surface-variant rounded-xl cursor-pointer hover:border-primary-container transition-colors has-[:checked]:bg-primary-container/10 has-[:checked]:border-primary">
+<input class="hidden" name="budget" type="radio" value="B2"/>
+<span class="material-symbols-outlined text-primary" data-icon="coffee">coffee</span>
+<div class="text-label-md font-label-md">Premium Roast ($$)</div>
+</label>
+</div>
+</div>
+<div class="pt-lg flex justify-center">
+<button class="bg-primary text-on-primary px-xl py-md rounded-full font-label-md text-label-md shadow-lg hover:scale-105 transition-transform active:scale-95" onclick="calculateResult()">
+                            Reveal My Result
+                        </button>
+</div>
+</div>
+<!-- Result Section (Hidden) -->
+<div class="hidden pt-xl mt-xl border-t-2 border-dashed border-primary-container" id="result-display">
+<div class="bg-white p-xl rounded-[2rem] shadow-2xl relative overflow-hidden">
+<div class="absolute top-4 right-4 rotate-12">
+<span class="bg-primary text-on-primary px-md py-1 rounded-full text-label-sm font-bold shadow-md">TOP MATCH</span>
+</div>
+<div class="flex flex-col md:flex-row gap-xl items-center">
+<div class="w-full md:w-1/3">
+<div class="polaroid transform -rotate-2">
+<img alt="Recommendation placeholder" class="w-full h-48 object-cover rounded-sm" id="result-img" src=""/>
+</div>
+</div>
+<div class="w-full md:w-2/3">
+<h4 class="font-display text-h1 text-primary mb-xs" id="result-title">Recommendation</h4>
+<p class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider mb-md" id="result-subtitle">Vibe Match Found</p>
+<p class="text-body-md text-on-surface mb-lg" id="result-desc"></p>
+<div class="flex flex-wrap gap-sm">
+<span class="bg-secondary-container text-on-secondary-container px-md py-1 rounded-full text-label-sm" id="tag-1">Tag 1</span>
+<span class="bg-secondary-container text-on-secondary-container px-md py-1 rounded-full text-label-sm" id="tag-2">Tag 2</span>
+</div>
+</div>
+</div>
+<div class="mt-lg pt-lg border-t border-surface-variant flex justify-between items-center">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<span class="text-label-md" id="result-loc">Bornova, Izmir</span>
+</div>
+<button class="text-primary font-bold hover:underline" onclick="window.location.reload()">Take Quiz Again</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-xl px-margin flex flex-col md:flex-row justify-between items-center mt-xl bg-surface-container-lowest dark:bg-surface-dim">
+<div class="mb-md md:mb-0">
+<div class="font-display text-h3 text-primary mb-xs">Bornova Koshu</div>
+<p class="font-body-md text-body-md text-on-tertiary-fixed-variant max-w-xs">
+                © 2024 Bornova Koshu • Built for Yaşar University Internationals
+            </p>
+</div>
+<div class="flex gap-lg">
+<a class="text-on-tertiary-fixed-variant hover:text-primary transition-colors font-label-sm text-label-sm" href="#">Privacy Policy</a>
+<a class="text-on-tertiary-fixed-variant hover:text-primary transition-colors font-label-sm text-label-sm" href="#">Contact Us</a>
+<a class="text-on-tertiary-fixed-variant hover:text-primary transition-colors font-label-sm text-label-sm" href="#">Instagram</a>
+</div>
+</footer>
+<script>
+        const results = {
+            R1: {
+                title: "Espresso Lab (Metro)",
+                subtitle: "The High-Energy Hub",
+                desc: "The ultimate industrial-chic spot for when you need a social buzz. Perfect for group projects and seeing half the Yaşar campus in one sitting.",
+                tags: ["Collaborative", "Modern"],
+                img: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800",
+                img_alt: "A modern industrial coffee shop interior with wooden tables, black accents, and students working on laptops under warm pendant lighting. The atmosphere is vibrant and social, with a clear focus on community and productivity."
+            },
+            R2: {
+                title: "The Bibliophile Corner",
+                subtitle: "The Silent Sanctuary",
+                desc: "Tucked away from the main boulevard, this spot offers floor-to-ceiling bookshelves and a strict 'hush' policy. Best for pre-exam cramming.",
+                tags: ["Quiet", "Academic"],
+                img: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&q=80&w=800",
+                img_alt: "A cozy, quiet library cafe interior with dark wood shelving, comfortable armchairs, and green desk lamps. Soft afternoon sunlight streams through large windows, highlighting dust motes and a peaceful reading atmosphere."
+            },
+            R3: {
+                title: "Language Garden",
+                subtitle: "The Social Exchange",
+                desc: "An outdoor patio filled with jasmine and international students. Many language exchange meetups happen here over Turkish tea.",
+                tags: ["Outdoor", "Social"],
+                img: "https://images.unsplash.com/photo-1544070078-a212eda27b49?auto=format&fit=crop&q=80&w=800",
+                img_alt: "A charming outdoor cafe patio decorated with hanging plants, colorful bunting, and rustic garden furniture. Small groups of diverse people are engaged in conversation with coffee cups on tables."
+            },
+            R4: {
+                title: "Mutfak Cafe",
+                subtitle: "Home Away From Home",
+                desc: "Family-run and cozy. It feels like studying in your grandmother's living room, complete with affordable homemade pastries.",
+                tags: ["Budget", "Cozy"],
+                img: "https://images.unsplash.com/photo-1559925393-8be0ec41b5ec?auto=format&fit=crop&q=80&w=800",
+                img_alt: "A warm, lived-in cafe space with vintage mismatched furniture, floral tablecloths, and the smell of fresh baking practically visible. A single student is reading a book near a small bookshelf."
+            },
+            R5: {
+                title: "Venti Coffee Roasters",
+                subtitle: "The Professional's Choice",
+                desc: "For the serious coffee connoisseur. High-speed Wi-Fi, plenty of power outlets, and the best single-origin beans in Bornova.",
+                tags: ["Premium", "Work-Focused"],
+                img: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=800",
+                img_alt: "A sleek, minimalist coffee roastery with clean white surfaces, professional brewing equipment, and focused individuals working on computers. The lighting is bright and even, perfect for deep work."
+            }
+        };
+
+        function calculateResult() {
+            const quizContainer = document.getElementById('quiz-container');
+            const resultDisplay = document.getElementById('result-display');
+            
+            // Basic logic: determine result based on common themes
+            // Simplified for demo: checks focus and budget
+            const f = document.querySelector('input[name="focus"]:checked')?.value || 'F1';
+            const b = document.querySelector('input[name="budget"]:checked')?.value || 'B1';
+            const s = document.querySelector('input[name="social"]:checked')?.value || 'S1';
+
+            let resultKey = "R1";
+            if (f === "F1" && b === "B2") resultKey = "R5";
+            else if (f === "F1" && b === "B1") resultKey = "R2";
+            else if (s === "S2") resultKey = "R3";
+            else if (b === "B1") resultKey = "R4";
+
+            const data = results[resultKey];
+            
+            document.getElementById('result-title').innerText = data.title;
+            document.getElementById('result-subtitle').innerText = data.subtitle;
+            document.getElementById('result-desc').innerText = data.desc;
+            document.getElementById('tag-1').innerText = data.tags[0];
+            document.getElementById('tag-2').innerText = data.tags[1];
+            
+            const imgEl = document.getElementById('result-img');
+            imgEl.src = data.img;
+            imgEl.setAttribute('data-alt', data.img_alt);
+
+            quizContainer.classList.add('hidden');
+            resultDisplay.classList.remove('hidden');
+            resultDisplay.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body></html>
